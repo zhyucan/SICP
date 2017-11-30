@@ -123,6 +123,9 @@ O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(n^3) < ... < O(2^n) <
 (define (divides? a b)
 	(= (remainder b a) 0))
 
+(define (prime? n)
+	(= n (smallest-divisor n)))
+
 (define (expmod base exp m)
 	(cond ((= exp 0) 1)
 		    ((even? exp)
@@ -131,6 +134,8 @@ O(1) < O(log n) < O(n) < O(n log n) < O(n^2) < O(n^3) < ... < O(2^n) <
 		    (else
 		    	(remainder (* base (expmod base (- exp 1) m)) 
 		    		         m))))
+
+
 
 
 

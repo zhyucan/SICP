@@ -2,8 +2,8 @@
 
 ;; 1st topic -- black-box abstraction
 
-#|
-computer science ;; wrong name
+computer science 
+;; wrong name
 
 how to formalize intuitions about process
 
@@ -60,7 +60,6 @@ black-box abstraction
 
 ;; 2nd topic -- conventional interfaces
 
-#|
 conventional interfaces
 - generic operations
 - large-scale structure and modularity
@@ -81,4 +80,3 @@ Meta-linguistic Abstraction -- construct new language
 - interpretation apply-eval
 - example - logic programming
 - register machines
-|#
