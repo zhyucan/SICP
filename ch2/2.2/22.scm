@@ -140,7 +140,7 @@ scheme 提供的 map
 		    (else (cons (scale-tree (car tree) factor)
 		    	          (scale-tree (cdr tree) factor)))))
 
-(scale-tree (list 1 (list 2 (list 3 4) 5) (list 6 7)) 
+(scale-tree (list 1 (list 2 (list 3 4) 5) (list 6 7))
 	          10)
 
 (10 (20 (30 40) 50) (60 70))
@@ -176,11 +176,11 @@ scheme 提供的 map
 (1 4 9 16 25)
 
 (define (filter predicate sequence)
-	(cond ((null? sequence) nil)
-		    ((predicate (car sequence))
-		     (cons (car sequence) 
-		     	     (filter predicate (cdr sequence))))
-		    (else (filter predicate (cdr sequence)))))
+  (cond ((null? sequence) nil)
+      ((predicate (car sequence))
+       (cons (car sequence) 
+              (filter predicate (cdr sequence))))
+      (else (filter predicate (cdr sequence)))))
 
 (filter odd? (list 1 2 3 4 5))
 (1 3 5)
@@ -218,17 +218,17 @@ scheme 提供的 map
 (1 2 3 4 5)
 
 (define (sum-odd-squares tree)
-	(accumulate + 
-		          0 
-		          (map square 
-		          	   (filter odd? 
+	(accumulate +
+		          0
+		          (map square
+		          	   (filter odd?
 		          	   	       (enumerate-tree tree)))))
 
 (define (even-fibs n)
-	(accumulate cons 
-		          nil 
-		          (filter even? 
-		          	      (map fib 
+	(accumulate cons
+		          nil
+		          (filter even?
+		          	      (map fib
 		          	      	   (enumerate-interval 0 n)))))
 
 (define (list-fib-squares n)
@@ -315,7 +315,7 @@ scheme 提供的 map
 
 (right-split painter 1)
 
-(beside painter (below (right-split painter 0) 
+(beside painter (below (right-split painter 0)
 		                   (right-split painter 0)))
 
 (beside painter (below painter painter))
@@ -333,7 +333,7 @@ scheme 提供的 map
 
 (corner-split painter 1)
 
-(beside (below painter 
+(beside (below painter
 	             (beside (up-split painter 0)
 	                     (up-split painter 0)))
         (below (below (right-split painter 0)
