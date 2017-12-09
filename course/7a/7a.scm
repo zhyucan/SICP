@@ -160,7 +160,7 @@ F = (λ (g)
 
 ((λ (x) (x x)) (λ (x) (x x)))
 
-;; Y -- Curry's Paradoxial Combinator of Y
+;; Y -- Curry's Paradoxical Combinator of Y
 
 Y = (λ (f)
       ((λ (x) (f (x x)))
