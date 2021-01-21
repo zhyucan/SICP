@@ -1,2 +1,0 @@
-;; Henderson Escher Example
-
