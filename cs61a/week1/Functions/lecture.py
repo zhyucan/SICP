@@ -67,3 +67,12 @@ btw 内存地址 --> memory address
 #
 # log(x, y)
 
+
+def hmmmm(x):
+    def f(x):
+        return x
+
+    return f
+
+
+log(hmmmm(5)(6))
